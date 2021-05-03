@@ -2,7 +2,7 @@ package com.edatalia.signplysdk.model
 
 import android.net.Uri
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 const val DEFAUTL_DOCUMENT_SIGNED_NAME = "documento_firmado.pdf"
 const val DEFAULT_SIGNATURE_RATIO = 2.5f
