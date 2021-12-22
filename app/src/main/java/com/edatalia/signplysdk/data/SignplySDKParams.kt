@@ -1,15 +1,15 @@
-package com.edatalia.signplysdk.model
+package com.edatalia.signplysdk.data
 
 import android.net.Uri
 import android.os.Parcelable
-import com.edatalia.signplysdk.model.SIGNplySDKConstants.DEFAULT_CUSTOM_TEXT_FONT_SIZE
-import com.edatalia.signplysdk.model.SIGNplySDKConstants.DEFAULT_FIXED_WIDGET_HEIGHT
-import com.edatalia.signplysdk.model.SIGNplySDKConstants.DEFAULT_FIXED_WIDGET_WIDTH
-import com.edatalia.signplysdk.model.SIGNplySDKConstants.DEFAULT_MANUAL_WIDGET_RATIO
-import com.edatalia.signplysdk.model.SIGNplySDKConstants.DEFAULT_NAME_SIGNED_DOCUMENT
-import com.edatalia.signplysdk.model.SIGNplySDKConstants.DEFAULT_RENDER_INDEX_PAGE
-import com.edatalia.signplysdk.model.SIGNplySDKConstants.DEFAULT_SIGNATURE_COLOR_HEX
-import com.edatalia.signplysdk.model.SIGNplySDKConstants.DEFAULT_SIGNATURE_THICKNESS
+import com.edatalia.signplysdk.data.SIGNplySDKConstants.DEFAULT_CUSTOM_TEXT_FONT_SIZE
+import com.edatalia.signplysdk.data.SIGNplySDKConstants.DEFAULT_FIXED_WIDGET_HEIGHT
+import com.edatalia.signplysdk.data.SIGNplySDKConstants.DEFAULT_FIXED_WIDGET_WIDTH
+import com.edatalia.signplysdk.data.SIGNplySDKConstants.DEFAULT_MANUAL_WIDGET_RATIO
+import com.edatalia.signplysdk.data.SIGNplySDKConstants.DEFAULT_NAME_SIGNED_DOCUMENT
+import com.edatalia.signplysdk.data.SIGNplySDKConstants.DEFAULT_RENDER_INDEX_PAGE
+import com.edatalia.signplysdk.data.SIGNplySDKConstants.DEFAULT_SIGNATURE_COLOR_HEX
+import com.edatalia.signplysdk.data.SIGNplySDKConstants.DEFAULT_SIGNATURE_THICKNESS
 import kotlinx.parcelize.Parcelize
 import java.lang.RuntimeException
 import java.security.InvalidParameterException
@@ -24,7 +24,7 @@ data class SignplySDKParams(
 ) : Parcelable
 
 @Parcelize
-class SignplySDKFileProperties(
+data class SignplySDKFileProperties(
     var uri: Uri,
     var signedName: String = DEFAULT_NAME_SIGNED_DOCUMENT,
     var isShareable: Boolean = false,
@@ -36,7 +36,7 @@ class SignplySDKFileProperties(
 ) : Parcelable
 
 @Parcelize
-class SignplySDKCommonProperties(
+data class SignplySDKCommonProperties(
     var title: String? = null,
     var requestLocation: Boolean = false,
     var simulateTestingSignature: Boolean = false,
